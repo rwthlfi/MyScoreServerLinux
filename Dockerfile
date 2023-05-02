@@ -5,7 +5,7 @@ FROM ubuntu:22.04
 # Variablen für den Build-Prozess
 RUN apt update && apt upgrade -y
 
-COPY ./* /var/MyScore/Linux
+COPY ./* /var/MyScore/Linux/
 RUN rm /var/MyScore/Linux/Dockerfile
 RUN rm /var/MyScore/Linux/entrypoint.sh
 # Kopiert das Entrypoint-Skript an die richtige Stelle
