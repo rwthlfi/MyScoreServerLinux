@@ -7,13 +7,10 @@ RUN apt update && apt upgrade -y
 
 COPY ./* /var/MyScore/Linux/
 RUN rm /var/MyScore/Linux/Dockerfile
-RUN rm /var/MyScore/Linux/entrypoint.sh
-# Kopiert das Entrypoint-Skript an die richtige Stelle
-COPY entrypoint.sh /
 
 # Macht das Entrypoint-Skript ausführbar
-RUN chmod +x /entrypoint.sh
+RUN chmod +x /var/MyScore/Linux/entrypoint.sh
 
 # ändert den Entrypoint, sodass beim starten des Images das entrypoint.sh Skript aufgerufen wird
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/var/MyScore/Linux/entrypoint.sh"]
 
