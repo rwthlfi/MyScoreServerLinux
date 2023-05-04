@@ -11,5 +11,5 @@ RUN rm /var/MyScore/Linux/Dockerfile
 # Ändert die Zugriffsberechtigungen von den Serverdateien
 RUN chmod +x /var/MyScore/Linux/MasterServer.x86_64 /var/MyScore/Linux/GameServer.x86_64 /var/MyScore/Linux/RemoteSpawner.x86_64
 # ändert den Entrypoint, sodass beim starten des Images das entrypoint.sh Skript aufgerufen wird
-ENTRYPOINT ["/var/MyScore/Linux/entrypoint.sh"]
+ENTRYPOINT ["/var/MyScore/Linux/MasterServer.x86_64"]
 
